@@ -32,11 +32,53 @@
                     <img src="" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis magni 
+                        vel eveniet labore! Nihil ullam, modi repellendus possimus optio in 
+                        dignissimos officiis, reprehenderit illum alias eos ratione quos. 
+                        Totam, nam!
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front End Development</span><br/>Developing Client Side Interaction and Back End Connection</li>
+                            <li><span>Back End Development</span><br/>Developing Server Side Login and database Interaction</li>
+                            <li><span>Full Stack</span><br/> Complete End to End Website Development</li>
+                            <li><span>Java</span><br/> Strong With OOPS concept And Spring Boot</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelors Of Technology </span><br/>Samskruti College Of Engineering and Technology<br/>(Computers Science Engineering)<br/>2019 - 2023</li>
+                            <li><span>Intermediate</span><br/>Narayana Junior College<br/>(Science)<br/>2017 - 2019</li>
+                            <li><span>Schooling</span><br/>St.Theresa High School<br/>(X)<br/>2016 - 2017</li>             
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
 </body>
 </html>
